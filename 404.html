@@ -1,1 +1,398 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Page Not Found</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cream: #f3f1eb;
+    --paper: #eae8e1;
+    --grey: #aaa9a2;
+    --dark: #292a28;
+    --muted: #777873;
+    --line: #d9d7d0;
+}
+
+body {
+    background: var(--cream);
+    color: var(--dark);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1120px;
+    width: 88%;
+    margin: auto;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.logo {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.logo span {
+    font-weight: 400;
+    color: var(--muted);
+}
+
+.header-right {
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+}
+
+/* HERO */
+
+.hero {
+    padding: 110px 0 85px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.eyebrow {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--muted);
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: clamp(55px, 7vw, 88px);
+    line-height: 1.05;
+    letter-spacing: -3px;
+}
+
+h1 em {
+    font-weight: 400;
+    color: var(--grey);
+}
+
+.description {
+    max-width: 380px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+    margin-top: 27px;
+}
+
+/* 404 VISUAL */
+
+.visual {
+    min-height: 340px;
+    background: var(--paper);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.visual::before {
+    content: "";
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    border: 1px solid #c9c7bf;
+    border-radius: 50%;
+}
+
+.visual::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border: 1px solid #d0cec6;
+    border-radius: 50%;
+}
+
+.visual-number {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(120px, 17vw, 195px);
+    color: var(--dark);
+    font-weight: 400;
+    z-index: 1;
+    letter-spacing: -10px;
+}
+
+.visual-label {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* MESSAGE */
+
+.message {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 35px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.message-content small {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--muted);
+}
+
+.message-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    font-weight: 400;
+    margin: 12px 0;
+}
+
+.message-content p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.8;
+    max-width: 550px;
+}
+
+.message-index {
+    font-family: 'Playfair Display', serif;
+    font-size: 55px;
+    color: #d3d1c9;
+}
+
+/* ACTIONS */
+
+.actions-section {
+    padding: 45px 0 90px;
+}
+
+.actions-section p {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 22px;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 15px 23px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: 1px solid var(--dark);
+    transition: .25s ease;
+}
+
+.btn.primary {
+    background: var(--dark);
+    color: var(--cream);
+}
+
+.btn.primary:hover {
+    background: transparent;
+    color: var(--dark);
+}
+
+.btn.secondary {
+    color: var(--dark);
+    border-color: var(--line);
+}
+
+.btn.secondary:hover {
+    background: var(--paper);
+    border-color: var(--grey);
+}
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid var(--line);
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+}
+
+footer span:last-child {
+    color: var(--dark);
+}
+
+/* MOBILE */
+
+@media(max-width: 700px) {
+    .header-right {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 75px 0 55px;
+        gap: 35px;
+    }
+
+    h1 {
+        font-size: 65px;
+    }
+
+    .visual {
+        min-height: 260px;
+    }
+
+    .visual-number {
+        font-size: 150px;
+    }
+
+    .message {
+        align-items: flex-start;
+    }
+
+    .message-index {
+        font-size: 35px;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .btn {
+        text-align: center;
+    }
+
+    footer {
+        flex-direction: column;
+        line-height: 1.8;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <div class="logo">
+            SUSHANT <span> / WEB PROGRAMMING</span>
+        </div>
+
+        <div class="header-right">
+            COURSEWORK ARCHIVE &nbsp; · &nbsp; 2026
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero">
+
+            <div>
+                <p class="eyebrow">404 &nbsp; / &nbsp; PAGE NOT FOUND</p>
+
+                <h1>
+                    A page<br>
+                    <em>out of place.</em>
+                </h1>
+
+                <p class="description">
+                    It seems you've taken a turn that doesn't lead
+                    anywhere. The page you're looking for may have
+                    been moved, removed, or never existed.
+                    Sometimes, even the best paths have a few
+                    missing pieces.
+                </p>
+            </div>
+
+            <div class="visual">
+                <div class="visual-number">404</div>
+                <span class="visual-label">UNAVAILABLE RESOURCE</span>
+            </div>
+
+        </section>
+
+        <section class="message">
+
+            <div class="message-content">
+                <small>A SMALL INTERRUPTION</small>
+
+                <h2>Not everything is where it should be.</h2>
+
+                <p>
+                    The requested address couldn't be found.
+                    Your coursework and projects are still here.
+                    Let's take you back to where you left off.
+                </p>
+            </div>
+
+            <div class="message-index">01</div>
+
+        </section>
+
+        <section class="actions-section">
+
+            <p>Perhaps you'd like to start from somewhere familiar.</p>
+
+            <div class="actions">
+
+                <a class="btn primary"
+                   href="https://syushantu-ops.github.io/web/">
+                    ← &nbsp; BACK TO COURSEWORK
+                </a>
+
+                <a class="btn secondary"
+                   href="./index.html">
+                    VISIT HOMEPAGE &nbsp; ↗
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <span>WEB PROGRAMMING · GACHON UNIVERSITY</span>
+        <span>DESIGNED BY NEUPANE SUSHANT</span>
+    </footer>
+
+</div>
+
+</body>
+</html>
+
